@@ -1,8 +1,11 @@
 const express = require("express");
 const router = express.Router();
 
-router.get("/list", (req, res) => {
-  res.send("List Auth ");
-});
+const Auth = require("../controllers/Auth");
+
+router
+  .post("/login", Auth.login)
+  .post("/signup", Auth.signup)
+  .get("/list", Auth.list);
 
 module.exports = router;
