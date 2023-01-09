@@ -12,7 +12,5 @@ app.get("/", (req, res) => {
   res.send("Hey this is my API running 🥳");
 });
 
-app.use(require("./routes"));
-
 // Export the Express API
 module.exports = app;
