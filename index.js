@@ -4,10 +4,6 @@ const express = require("express");
 const app = express();
 const PORT = 4000;
 
-const Database = require("./database");
-const database = new Database();
-database.connectMongodb();
-
 app.listen(PORT, () => {
   console.log(`API listening on PORT ${PORT} `);
 });
